@@ -28,4 +28,14 @@ public class MatrixCheck {
         }
         return rsl;
     }
+    public static boolean isWin(char[][] array) {
+        boolean rsl = false;
+        for(int i = 0; i < 5; i++) {
+            if(monoHorizontal(array, i) || monoVertical(array, i)) {
+                rsl = true;
+                break;
+            }
+        }
+        return rsl;
+    }
 }
