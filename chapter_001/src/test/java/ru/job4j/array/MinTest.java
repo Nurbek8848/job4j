@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 public class MinTest {
     @Test
     public void lastMin() {
-        assertThat(Min.min(new int[] {5, 9, 10, 3,}), is(3));
+        assertThat(Min.min(new int[] {5, 9, 10, 3}), is(3));
     }
     @Test
     public void firstMin() {

@@ -13,7 +13,7 @@ public class MatrixCheck {
     }
     public static boolean monoVertical(char[][] array, int column) {
         boolean result = true;
-        for(int i = 0; i < array.length; i++ ) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i][column] != 'X') {
                 result = false;
                 break;
@@ -23,15 +23,15 @@ public class MatrixCheck {
     }
     public static char[] extractDiagonal(char[][] array) {
         char[] rsl = new char[array.length];
-        for(int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             rsl[i] = array[i][i];
         }
         return rsl;
     }
     public static boolean isWin(char[][] array) {
         boolean rsl = false;
-        for(int i = 0; i < 5; i++) {
-            if(monoHorizontal(array, i) || monoVertical(array, i)) {
+        for (int i = 0; i < 5; i++) {
+            if (monoHorizontal(array, i) || monoVertical(array, i)) {
                 rsl = true;
                 break;
             }
