@@ -5,27 +5,30 @@ import org.junit.Test;
 
 public class MaxTest {
     @Test
-    public void maxLeft() {
-        int inLeft = 15;
-        int inRight = 10;
+    public void max2() {
+        int inFirst = 15;
+        int inSecond = 10;
         int expected = 15;
-        int out = Max.max(inLeft, inRight);
+        int out = Max.max(inFirst, inSecond);
         Assert.assertEquals(expected, out);
     }
     @Test
-    public void maxRight() {
-        int inLeft = 5;
-        int inRight = 10;
-        int expected = 10;
-        int out = Max.max(inLeft, inRight);
+    public void max3() {
+        int inFirst = 15;
+        int inSecond = 20;
+        int inThird = 17;
+        int expected = 20;
+        int out = Max.max(inFirst, inSecond, inThird);
         Assert.assertEquals(expected, out);
     }
     @Test
-    public void maxEq() {
-        int inLeft = 10;
-        int inRight = 10;
-        int expected = 10;
-        int out = Max.max(inLeft, inRight);
+    public void max4() {
+        int inFirst = 15;
+        int inSecond = 20;
+        int inThird = 17;
+        int inFourth = 40;
+        int expected = 40;
+        int out = Max.max(inFirst, inSecond, inThird, inFourth);
         Assert.assertEquals(expected, out);
     }
 
