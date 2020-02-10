@@ -70,4 +70,12 @@ public class Tracker {
         items[index] = item;
         return items[index];
     }
+    public void delete(String id) {
+        int start = indexOf(id) + 1;
+        int disPos = indexOf(id);
+        int size = position - indexOf(id);
+        items[position] = null;
+        position--;
+        System.arraycopy(items, start, items, disPos, size);
+    }
 }
