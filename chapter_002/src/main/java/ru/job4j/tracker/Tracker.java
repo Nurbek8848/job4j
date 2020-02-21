@@ -42,10 +42,12 @@ public class Tracker {
         Item findId = new Item();
         for (int i = 0; i < this.items.length; i++) {
             Item item = this.items[i];
-            if (id.equals(item.getId())) {
-                findId = item;
-            } else {
-                findId = null;
+            if (item != null) {
+                if (id.equals(item.getId())) {
+                    findId = item;
+                } else {
+                    findId = null;
+                }
             }
         }
         return findId;
@@ -78,4 +80,5 @@ public class Tracker {
         position--;
         System.arraycopy(items, start, items, disPos, size);
     }
+
 }
